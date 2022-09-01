@@ -34,7 +34,7 @@ const managerQuestions = () => {
           data.manager,
           data.managerEmail,
           data.managerNumber,
-          data.managerOffice
+          data.managerOffice,
         );
         return employeeQuestions(), currentTeam.push(newManager);
       });
@@ -113,7 +113,7 @@ const managerQuestions = () => {
                       data.intern,
                       data.internEmail,
                       data.internNumber,
-                      data.InternNumber
+                      data.InternSchool,
                     );
                     return employeeQuestions(), currentTeam.push(newIntern);
                   });

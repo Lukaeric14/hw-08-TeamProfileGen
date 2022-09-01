@@ -3,70 +3,42 @@ const fs = require('fs');
 
 const managerGen = (manager) => {
   return `
-    <div class="col-lg-3 col-md-4 col-sm-6">
-          <div class="my-4 card">
-            <div class="card-header bg-dark text-white">
-              <h3 class="card-title">${manager.name}</h3>
-              <h4 class="card-subtitle">Manager</h3>
-            </div>
-            <div class="card-body bg-light p-3">
-              <ul class="list-group">
-                <li class="list-group-item">ID: ${manager.id}</li>
-                <li class="list-group-item">
-                  Email: <a href="mailto:${manager.email}">${manager.email}</a>
-                </li>
-                <li class="list-group-item">Office Number:${manager.officeNumber}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">${manager.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Manager</h6>
+      <p class="card-text">Email: <a href="mailto:${manager.email}">${manager.email}</a></p>
+      <p class="card-text">Phone: ${manager.phone}</p>
+      <p class="card-text">Office: ${manager.office}</p>
+    </div>
+</div>
   `;
 };
 
 const engineerGen = (engineer) => {
   return `
-  <div class="col-lg-3 col-md-4 col-sm-6">
-  <div class="my-4 card">
-    <div class="card-header bg-dark text-white">
-      <h3 class="card-title">${engineer.name}</h3>
-      <h4 class="card-subtitle">Engineer</h4>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">${engineer.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Engineer</h6>
+      <p class="card-text">Email: <a href="mailto:${engineer.email}">${engineer.email}</a></p>
+      <p class="card-text">Phone: ${engineer.phone}</p>
+      <p class="card-text">Github: <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a></p>
     </div>
-    <div class="card-body bg-light p-3">
-      <ul class="list-group">
-        <li class="list-group-item">ID: ${engineer.id}</li>
-        <li class="list-group-item">
-          Email:
-          <a href="mailto:${engineer.email}">${engineer.email}</a>
-        </li>
-        <li class="list-group-item">
-          GitHub:
-          <a href="https://github.com/${engineer.github}" target="_blank">${engineer.github}</a>
-        </li>
-      </ul>
-    </div>
-  </div>
 </div>
   `;
 };
 
 const internGen = (intern) => {
   return `
-  <div class="col-lg-3 col-md-4 col-sm-6">
-  <div class="my-4 card">
-    <div class="card-header bg-dark text-white">
-      <h3 class="card-title">${intern.name}</h3>
-      <h4 class="card-subtitle">Intern</h4>
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title">${intern.name}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">Intern</h6>
+      <p class="card-text">Email: <a href="mailto:${intern.email}">${intern.email}</a></p>
+      <p class="card-text">Phone: ${intern.phone}</p>
+      <p class="card-text">School: ${intern.school}</p>
     </div>
-    <div class="card-body bg-light p-3">
-      <ul class="list-group">
-        <li class="list-group-item">ID: ${intern.id}</li>
-        <li class="list-group-item">
-          Email: <a href="mailto:${intern.email}">${intern.email}</a>
-        </li>
-        <li class="list-group-item">School: ${intern.school}</li>
-      </ul>
-    </div>
-  </div>
 </div>
   `;
 };
