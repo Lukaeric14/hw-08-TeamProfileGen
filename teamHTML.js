@@ -1,4 +1,4 @@
-const teamHTML = (teamCards) => {
+const teamHTML = (teamHTML) => {
     return `
   <!DOCTYPE html>
   <html lang="en">
@@ -15,11 +15,11 @@ const teamHTML = (teamCards) => {
       <div class="container-fluid">
         <div class="row">
           <div class="col-13 jumbotron mb-3 bg-primary text-white">
-            <h1 class="text-center">My Team</h1>
+            <h1 class="text-center">The Dream Team</h1>
           </div>
         </div>
         <div class="row">
-          ${teamCards}
+          ${teamHTML}
         </div>
       </div>
     </body>

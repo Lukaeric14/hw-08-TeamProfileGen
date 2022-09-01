@@ -45,28 +45,28 @@ const internGen = (intern) => {
 
 const createTeam = (currentTeam) => {
     
-  teamList = [];
+  team = [];
   for (var i = 0; i < currentTeam.length; i++) {
     const role = currentTeam[i].getRole();
 
     if (role === 'Manager') {
-      teamList.push(managerGen(currentTeam[i]));
+      team.push(managerGen(currentTeam[i]));
     }
     if (role === 'Engineer') {
-      teamList.push(engineerGen(currentTeam[i]));
+      team.push(engineerGen(currentTeam[i]));
     }
     if (role === 'Intern') {
-      teamList.push(internGen(currentTeam[i]));
+      team.push(internGen(currentTeam[i]));
     }
   }
-  let teamCards = teamList.join('');
-  let fullHTML = teamHTML(teamCards);
-  writeFile(fullHTML);
+  let teamHTML = team.join('');
+  let HTML = teamHTML(teamHTML);
+  writeFile(HTML);
 };
 
-function writeFile(fullHTML) {
-  fs.writeFileSync('./dist/exampleTeam.html', fullHTML, (err) => {
-    err ? console.error(err) : console.log('Team Created');
+function writeFile(HTML) {
+  fs.writeFileSync('./dist/team.html', HTML, (err) => {
+    err ? console.error(err) : console.log('Created');
   });
 }
 

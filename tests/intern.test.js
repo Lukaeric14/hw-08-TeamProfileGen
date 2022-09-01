@@ -9,8 +9,6 @@ test('Intern Initiation', () => {
     
     expect(intern.phone).toEqual(expect.any(String));
 
-    expect(intern.github).toEqual(expect.any(String));
-
     expect(intern.school).toEqual(expect.any(String));
 
 });
