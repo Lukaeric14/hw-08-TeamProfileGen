@@ -44,7 +44,6 @@ const internGen = (intern) => {
 };
 
 const createTeam = (currentTeam) => {
-    
   team = [];
   for (var i = 0; i < currentTeam.length; i++) {
     const role = currentTeam[i].getRole();
@@ -59,14 +58,14 @@ const createTeam = (currentTeam) => {
       team.push(internGen(currentTeam[i]));
     }
   }
-  let teamHTML = team.join('');
-  let HTML = teamHTML(teamHTML);
+  let teamtemplate = team.join('');
+  let HTML = teamHTML(teamtemplate);
   writeFile(HTML);
 };
 
 function writeFile(HTML) {
   fs.writeFileSync('./dist/team.html', HTML, (err) => {
-    err ? console.error(err) : console.log('Created');
+    err ? console.error(err) : console.log('Team Created');
   });
 }
 
